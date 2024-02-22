@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/3870e0c33a.js" crossorigin="anonymous"></script>
+    <style>
+        .login_page{
+            display: flex;
+            justify-content: center;
+            margin-top: 100px;
+        }
+        .login-form{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+        }
+        .login-form input{
+            margin-top: 10px;
+            font-size: 20px;
+            padding: 5px 10px;
+        }
+        .login-form input[type="button"]{
+            background-color: gold;
+            border: none;
+            color: white;
+        }
+
+        nav a{
+            text-decoration: none;
+            margin-right: 10px;
+            font-size: 20px;
+            color: black;
+        }
+
+        nav{
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <span>
+                <a href="">Home</a>
+                <a href="">Inventory</a>
+                <a href="">About Us</a>
+            </span>
+
+            <span>
+                <a href=""><i class="fa-solid fa-user"></i></a>
+                <a href=""><i class="fa-solid fa-right-from-bracket"></i></a>
+            </span>
+        </nav>
+    </header>
+    <section class="login_page">
+        <form class="login-form">
+            <h1>Please Login</h1>
+            <input type="email" name="" id="" placeholder="Your Email" required>
+            <input type="password" name="" id="" placeholder="Your Password">
+            <input type="button" value="Login">
+        </form>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome To our show</h1>
+    <div id="parent-container">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum ipsa illum, rem ratione molestiae corrupti distinctio doloremque sit, quod quaerat aliquam in? Perspiciatis eveniet blanditiis temporibus voluptatibus quibusdam vero reiciendis.
+        </p>
+        <p>Ea repellendus deleniti obcaecati, atque quidem iusto commodi assumenda quis hic laborum libero earum esse molestias vel sit cupiditate. Maxime quaerat, ea numquam expedita repellendus et unde debitis corporis quo.
+        </p>
+        <p>Quidem animi rerum similique officiis voluptas corporis perferendis, facilis iusto culpa veniam repudiandae suscipit aliquam nihil sint dolorum adipisci praesentium expedita aperiam eum ipsum provident velit ratione architecto! Id, voluptates?
+        </p>
+    </div>
+    <div>
+        <textarea name="" id="new-comment" cols="30" rows="10"></textarea>
+        <br>
+        <button id="post-btn">Post</button>
+    </div>
+    <script>
+        document.getElementById('post-btn').addEventListener('click',function(){
+            const comment = document.getElementById('new-comment').value;
+            const parent_container = document.getElementById('parent-container');
+            
+            const p = document.createElement('p');
+            p.innerText = comment;
+            parent_container.appendChild(p);
+        })
+    </script>
+</body>
+</html>

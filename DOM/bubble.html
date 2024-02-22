@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <h1>Exploring Event bubble</h1>
+        <ul id="list-ul">
+            <li id="item-1">Lorem, ipsum.</li>
+            <li id="item-2">Nulla, corporis?</li>
+            <li id="item-3">Quos, tempora?</li>
+            <li id="item-4">Dolor, dolores.</li>
+            <li id="item-5">Doloremque, nobis.</li>
+            <li id="item-6">Dignissimos, ipsam!</li>
+        </ul>
+    </section>
+
+    <script>
+        document.getElementById('item-2').addEventListener('click',function(event){
+            console.log("Item2 clicked")
+            event.stopPropagation();
+        })
+        document.getElementById('list-ul').addEventListener('click',function(){
+            console.log("list-ul clicked")
+        })
+    </script>
+</body>
+</html>
