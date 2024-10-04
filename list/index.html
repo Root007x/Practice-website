@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Country Information</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      cursor: pointer;
+      margin-bottom: 10px;
+      padding: 10px;
+      background-color: #f4f4f4;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    li:hover {
+      background-color: #ddd;
+    }
+    #description {
+      width: 300px;
+      height: 150px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<ul id="country-list">
+  <li onclick="showDescription(0)">USA</li>
+  <li onclick="showDescription(1)">Canada</li>
+  <li onclick="showDescription(2)">Australia</li>
+  <li onclick="showDescription(3)">United Kingdom</li>
+</ul>
+
+<textarea id="description" readonly></textarea>
+<p><button>Submit</button></p>
+
+<script>
+  var info = {
+    0 : ["Mango","Banana","Tomato"],
+    1 : ["Goat","Messi","Rolando"],
+    2 : ["Hasan","Kalam","Salam"],
+    3 : ["Yo","Good","Bad"]
+  };
+
+  function showDescription(index) {
+    const box = document.getElementById("description");
+    box.value = info[index];
+  }
+</script>
+
+</body>
+</html>
+
